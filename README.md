@@ -19,7 +19,7 @@ Created by **Adam Suchi Hafizullah** as part of AI-assisted development learning
 
 1. Clone the repository or download the script:
 ```bash
-git clone https://github.com/yourusername/folder-structure-generator.git
+git clone https://github.com/ashafizullah/folder_structure_generator
 cd folder-structure-generator
 ```
 
