@@ -1,26 +1,34 @@
-# Folder Structure Generator
+# Python Project Analyzer
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-A Python utility to visualize project directory structures in both text and JSON formats, with optional .gitignore support.
+A powerful Python utility that helps developers and AI assistants better understand codebases by visualizing project structures and combining code files with smart filtering options.
 
 Created by **Adam Suchi Hafizullah** as part of AI-assisted development learning.
 
-## Features
+## 🚀 Key Features
 
-- 📂 Generate clean folder structure visualizations
-- ✨ Two output formats: Text (tree) and JSON
-- ⚡ Optional .gitignore pattern exclusion
-- 🎯 Configurable depth limitation
-- 🛠️ Cross-platform (Windows/macOS/Linux)
+- **Dual-Format Structure Visualization**
+  - 📋 Text Format (Tree View) - Human-readable directory structure
+  - 🔄 JSON Format - Machine-processable structure for integrations
+  
+- **Smart Code Concatenator**
+  - 📦 Combines all code files from any directory
+  - 🏷️ Adds clear file boundaries with descriptive headers
+  - 🔠 Supports 30+ programming languages
+  
+- **Intelligent Filtering**
+  - 🚫 .gitignore-aware scanning
+  - 🔍 Configurable depth limitation for large projects
+  - 📊 Detailed processing summaries
 
-## Installation
+## 🛠️ Installation
 
-1. Clone the repository or download the script:
+1. Clone the repository:
 ```bash
 git clone https://github.com/ashafizullah/folder_structure_generator
-cd folder-structure-generator
+cd folder_structure_generator
 ```
 
 2. Ensure you have Python 3.6+ installed:
@@ -28,73 +36,86 @@ cd folder-structure-generator
 python --version
 ```
 
-## Usage
+3. No additional dependencies required - uses Python standard library only!
 
-Run the script with:
+## 📋 Usage
+
+Run the script:
 ```bash
 python main.py
 ```
 
-You'll be prompted for:
-1. Project path (leave empty for current directory)
-2. Maximum depth (leave empty for unlimited)
-3. Whether to exclude files/folders based on .gitignore
-4. Output format (text or JSON)
+### Interactive Menu Options:
 
-### Example Output Files
-* `output.txt` (text tree format)
-* `output.json` (structured JSON format)
+**1. Generate Folder Structure**
+   - Choose between Text and JSON formats
+   - Specify project path (defaults to current directory)
+   - Set maximum depth (optional)
+   - Enable .gitignore pattern exclusion
 
-### Text Output Example
-```
-Folder Structure for: /projects/my-app
-Max Depth: 2
-==================================
-├── src/
-│   ├── components/
-│   │   ├── Button.js
-│   │   └── Header.js
-│   └── App.js
-└── package.json
-```
+**2. Concatenate Code Files**
+   - Select target folder to analyze
+   - Automatically detects supported code files
+   - Apply .gitignore filtering (optional)
+   - Creates a single document with all code files
 
-### JSON Output Example
-```json
-{
-    "path": "/projects/my-app",
-    "max_depth": 2,
-    "structure": {
-        "src": {
-            "components": {
-                "Button.js": "file",
-                "Header.js": "file"
-            },
-            "App.js": "file"
-        },
-        "package.json": "file"
-    }
-}
-```
+**3. Exit**
 
-## Use Cases
+## 📄 Output Files
 
-1. **Project documentation** - Include structure visualizations in your docs
-2. **Code reviews** - Quickly share project layouts
-3. **AI training** - Provide context about project structures
-4. **Onboarding** - Help new team members understand codebases
-5. **Backup planning** - Document important file locations
+The tool generates the following output files:
 
-## Development Notes
+- **Text Format**: `folder_structure.txt` - A tree-like representation of your project
+- **JSON Format**: `folder_structure.json` - A structured data representation
+- **Code Concatenation**: `combined_code.txt` - All code files combined with clear separators
 
-This project was created using AI-assisted development techniques, demonstrating:
-* Practical Python filesystem operations
-* Recursive algorithms
-* Clean code architecture
-* User-friendly CLI design
-* Multiple output format generation
+## 🎯 Use Cases
 
-## License
+1. **Project Documentation**
+   - Include structure visualizations in your documentation
+   - Create snapshots of project evolution over time
+
+2. **AI Context Generation**
+   - Feed project structure to AI tools for better code suggestions
+   - Help AI assistants understand your codebase at a glance
+
+3. **Onboarding and Knowledge Transfer**
+   - Help new team members quickly grasp project organization
+   - Create code inventories for handover documentation
+
+4. **Code Reviews**
+   - Share complete project context with reviewers
+   - Highlight structural changes between versions
+
+5. **Legacy Code Analysis**
+   - Quickly map unfamiliar codebases
+   - Identify code organization patterns
+
+## 🧠 Technical Details
+
+The analyzer uses several key techniques:
+
+- **Recursive Directory Traversal** - For efficient folder scanning
+- **Gitignore Pattern Matching** - For intelligent file filtering
+- **File Extension Detection** - For identifying code files
+- **Unicode-Safe File Handling** - For cross-platform compatibility
+- **JSON Serialization** - For structured data output
+
+## 🤝 Contributing
+
+Contributions are welcome! Here are ways you can help:
+
+1. Add support for more code file extensions
+2. Improve gitignore pattern matching
+3. Add export options (e.g., XML, HTML visualization)
+4. Create unit tests
+
+## 📜 License
 
 MIT License - Free for personal and commercial use
 
+---
+
 Created with ❤️ by Adam Suchi Hafizullah
+
+*This project demonstrates practical Python filesystem operations, recursive algorithms, and AI-assisted development techniques.*
